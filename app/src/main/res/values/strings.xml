@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">wallpaper app</string>
+
+
+
+
+    <string name="bannerid">ca-app-pub-3940256099942544/6300978111</string>
+
+
+    <string name="interstitialid">ca-app-pub-3940256099942544/1033173712</string>
+</resources>
