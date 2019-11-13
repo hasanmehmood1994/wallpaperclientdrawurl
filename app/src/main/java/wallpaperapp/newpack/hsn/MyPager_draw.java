@@ -1,4 +1,4 @@
-package wallpaperapp.mbh.wallpaperapp;
+package wallpaperapp.newpack.hsn;
 
 
 import android.content.Context;
@@ -8,8 +8,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import androidx.viewpager.widget.PagerAdapter;
-
-import com.bumptech.glide.Glide;
 
 public class MyPager_draw extends PagerAdapter {
     private Context context;

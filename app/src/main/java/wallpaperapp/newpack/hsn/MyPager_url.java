@@ -1,9 +1,7 @@
-package wallpaperapp.mbh.wallpaperapp;
+package wallpaperapp.newpack.hsn;
 
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,8 +10,6 @@ import android.widget.ImageView;
 import androidx.viewpager.widget.PagerAdapter;
 
 import com.bumptech.glide.Glide;
-
-import java.util.ArrayList;
 
 
 public class MyPager_url extends PagerAdapter {

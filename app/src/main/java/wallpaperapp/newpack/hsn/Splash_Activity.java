@@ -1,4 +1,4 @@
-package wallpaperapp.mbh.wallpaperapp;
+package wallpaperapp.newpack.hsn;
 
 import androidx.appcompat.app.AppCompatActivity;
 

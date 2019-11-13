@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:dist="http://schemas.android.com/apk/distribution"
-    package="wallpaperapp.mbh.wallpaperapp">
+    package="wallpaperapp.newpack.hsn">
 <uses-permission android:name="android.permission.INTERNET"/>
     <dist:module dist:instant="true" />
 
@@ -13,9 +13,9 @@
         android:roundIcon="@drawable/appicon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainHome"></activity>
-        <activity android:name=".ImageViewActivity" android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".Splash_Activity"
+        <activity android:name="wallpaperapp.newpack.hsn.MainHome"></activity>
+        <activity android:name="wallpaperapp.newpack.hsn.ImageViewActivity"/>
+        <activity android:name="wallpaperapp.newpack.hsn.Splash_Activity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

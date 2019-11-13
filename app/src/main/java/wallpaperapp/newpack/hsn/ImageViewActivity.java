@@ -1,28 +1,22 @@
-package wallpaperapp.mbh.wallpaperapp;
+package wallpaperapp.newpack.hsn;
 
 import android.app.WallpaperManager;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewpager.widget.ViewPager;
 
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.target.SimpleTarget;
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 
@@ -40,7 +34,7 @@ public class ImageViewActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private InterstitialAd mInterstitialAd;
     private CircleIndicator circleIndicator;
-TextView textView;
+
     private MyPager_url myPager;
 
     private MyPager_draw myPager2;
@@ -56,11 +50,9 @@ TextView textView;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_image);
-textView=findViewById(R.id.textView);
-        if (Build.VERSION.SDK_INT >= 21) {
-            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
-        }
+
 
 
         final Intent intent = getIntent();
@@ -75,11 +67,12 @@ textView=findViewById(R.id.textView);
 if (innn.equals("1"))
 {
     setUPListdraw();
-    textView.setText(""+cu+" / "+totalsize);
+    setTitle(""+cu+" / "+totalsize);
+
 }
 else {
     setUPListurl();
-    textView.setText(""+cu+" / "+totalsize);
+    setTitle(""+cu+" / "+totalsize);
 }
 
 
@@ -92,7 +85,7 @@ else {
         mAdView.loadAd(adRequest);
 
         mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId(String.valueOf(R.string.interstitialid));
+        mInterstitialAd.setAdUnitId(String.valueOf("ca-app-pub-3940256099942544/1033173712"));
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
     }
@@ -124,7 +117,7 @@ viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
 
     iindex=position;
     cu=position+1;
-        textView.setText(""+cu+" / "+totalsize);
+        setTitle(""+cu+" / "+totalsize);
     }
 
     @Override
@@ -158,7 +151,7 @@ viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
 
                 iindex=position;
                 cu=position+1;
-                textView.setText(""+position+" / "+totalsize);
+                setTitle(""+cu+" / "+totalsize);
             }
 
             @Override

@@ -1,7 +1,6 @@
-package wallpaperapp.mbh.wallpaperapp;
+package wallpaperapp.newpack.hsn;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -19,7 +18,6 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 
@@ -31,11 +29,15 @@ public class MainHome extends AppCompatActivity {
 
 
     // image array(idr ap ne sari image dalni)
-   static int[] imglisdrawable = new int[]{R.drawable.in4, R.drawable.in5};
+   static int[] imglisdrawable = new int[]{R.drawable.in4, R.drawable.in5,R.drawable.loading,R.drawable.hhh};
+
+
+
     public  static  String[] imglisurl = new String[]{"https://cdn.pixabay.com/photo/2018/10/30/16/06/water-lily-3784022__340.jpg"
             ,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7AUn8-oTWJcaEX-WkNZW20JkQNnfZBpWVuCFQNBvklBKoJfEH&s"
             ,"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7AUn8-oTWJcaEX-WkNZW20JkQNnfZBpWVuCFQNBvklBKoJfEH&s"
             ,"https://cdn.pixabay.com/photo/2018/10/30/16/06/water-lily-3784022__340.jpg"
+
 
     };
     private ImageView imageView;
@@ -56,18 +58,16 @@ public class MainHome extends AppCompatActivity {
        // setWallpaper();
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerViewImage);
-//for drawables
-       // fromdrawable();
 
-       // forurl
-
-
-     fromurl();
+     fromdrawable();
 
 
 
-    //admobbanner
-//        View adContainer = findViewById(R.id.adView);
+
+    // fromurl();
+
+
+
         AdView mAdView ;
 //        mAdView.setAdSize(AdSize.BANNER);
 //        mAdView.setAdUnitId( String.valueOf(R.string.bannerid));
@@ -79,7 +79,7 @@ public class MainHome extends AppCompatActivity {
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
         mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId(String.valueOf(R.string.interstitialid));
+        mInterstitialAd.setAdUnitId(String.valueOf("ca-app-pub-3940256099942544/1033173712"));
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
     }
 

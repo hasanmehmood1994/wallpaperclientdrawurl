@@ -1,4 +1,4 @@
-package wallpaperapp.mbh.wallpaperapp;
+package wallpaperapp.newpack.hsn;
 
 
 import android.content.Context;
